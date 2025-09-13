@@ -1,26 +1,37 @@
- <!DOCTYPE html> 
-<html lang="ru"> 
+<!DOCTYPE html>
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Контакты - Mashroom-ah Incorporated</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Mashroom-ah Incorporated</title>
     <meta name="description" content="Свяжитесь с нами для сотрудничества и получения дополнительной информации">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <a href="/">Mashroom-ah Incorporated представляет</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+    <header class="site-header">
+        <a class="site-header__brand" href="/">Mashroom-ah Incorporated представляет</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="about.html">О нас</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="contacts.html" aria-current="page">Контакты</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> -
-            <span>Контакты</span>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+            <span class="breadcrumbs__separator">→</span>
+            <span class="breadcrumbs__current" aria-current="page">Контакты</span>
         </nav>
         <h1>Наши контакты</h1>
         <section>
@@ -38,8 +49,8 @@
             <p>Вы можете связаться с нами с помощью голубиной почты</p>
         </section>
     </main>
-    <footer> 
-        <p>&copy; 2023 Mashroom-ah Incorporated. Все права защищены.</p> 
-        <p>Телефон: +7 (123) 456-78-90</p> 
+    <footer>
+        <p>&copy; 2023 Mashroom-ah Incorporated. Все права защищены.</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
     </footer>
 </body>

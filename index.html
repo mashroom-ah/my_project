@@ -1,76 +1,121 @@
- <!DOCTYPE html> 
-<html lang="ru"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Главная - Mashroom-ah Incorporated</title> 
-    <meta name="description" content="Мини углок mashroom-ah в digital-пространстве. Пишу код, ломаю код, фикшу код."> 
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Mashroom-ah Incorporated</title>
+    <meta name="description" content="Мини углок mashroom-ah в digital-пространстве. Пишу код, ломаю код, фикшу код.">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-</head> 
-<body> 
-    <!-- Шапка сайта --> 
-    <header> 
-        <a href="/">Mashroom-ah Incorporated представляет</a> 
-        <!-- Главное меню навигации --> 
-        <nav> 
-            <ul> 
-                <li><a href="index.html">Главная</a></li> 
-                <li><a href="about.html">О нас</a></li> 
-                <li><a href="contacts.html">Контакты</a></li> 
-            </ul> 
-        </nav> 
-    </header> 
-    <!-- Уникальное основное содержимое страницы --> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <a class="site-header__brand" href="/">Mashroom-ah Incorporated представляет</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html" aria-current="page">Главная</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="about.html">О нас</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Уникальное основное содержимое страницы -->
     <main>
-        <h1>Добро пожаловать на наш мини-сайтик!</h1> 
-        <!-- Секция 1 с якорем --> 
-        <section id="services"> 
-            <h2>Наши услуги</h2> 
-            <p>Профессионально ломаем наш и Ваш код, почти так же профессионально его фиксим</p> 
-            <a href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы --> 
-        </section> 
-        <!-- Секция 2 с якорем --> 
-        <section id="portfolio"> 
-            <h2>Портфолио</h2> 
+        <section class="hero">
+            <div class="hero__content">
+                <h1>Добро пожаловать на наш мини-сайтик!</h1>
+                <p>Пространство творчества начинающего программиста</p>
+            </div>
+        </section>
+        <section>
+            <h2 id="services" class="anchor-target">Наши услуги</h2>
+            <p>Профессионально ломаем наш и Ваш код, почти так же профессионально его фиксим</p>
+            <a href="#contacts" class="anchor-link">Связаться с нами</a>
+        </section>
+
+        <!-- Секция 2 с якорем -->
+        <section>
+            <h2 id="portfolio" class="anchor-target">Портфолио</h2>
             <ul>
                 <li>Трекер привычек "HabitTracker"</li>
                 <li>База данных интернет-магазина "Na divane"</li>
                 <li>Калькулятор с расширенным функционалом "EasyCalc"</li>
                 <li>Приложение для регулярного полива цветов "Die not today</li>
-            </ul> 
-        </section> 
-        <!-- Секция 3 с якорем --> 
-        <section id="contacts"> 
-            <h2>Контактная информация</h2> 
-            <p>Наши контактики</p> 
-            <a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу --> 
+            </ul>
         </section>
-        <section id="feedback">
-            <h2>Готовы начать проект или хотите получить более детальную информацию?</h2>
+
+        <!-- Добавляем после существующих секций -->
+        <section>
+            <h2 id="projects" class="anchor-target">Наши проекты</h2>
+            <p>Вот пример одного из наших последних проектов:</p>
+            
+            <!-- Точный код из практической -->
+            <img
+                src="img/card-640.jpg"
+                srcset="img/card-640.jpg 640w, img/card-960.jpg 960w, img/card-1280.jpg 1280w"
+                sizes="(max-width: 700px) 92vw, (max-width: 1200px) 640px, 960px"
+                alt="Проект: трекер привычек"
+                loading="lazy">
+        </section>
+
+        <!-- Секция 3 с якорем -->
+        <section>
+            <h2 id="contacts" class="anchor-target">Контактная информация</h2>
+            <p>Наши контактики</p>
+            <a href="contacts.html">Подробнее</a>
+        </section>
+
+        <!-- Секция 4 с якорем -->
+        <section>
+            <h2 id="feedback" class="anchor-target">Готовы начать проект или хотите получить более детальную информацию?
+            </h2>
             <p>Расскажите о вашей задаче, и мы найдём решение вместе. Отвечаем быстро!</p>
-            <!-- Кнопка открытия модалки -->
             <button id="openDialog" type="button">Написать нам</button>
         </section>
-    </main>  
-    <!-- Подвал сайта --> 
-    <footer> 
-        <p>&copy; 2023 Mashroom-ah Incorporated. Все права защищены.</p> 
-        <p>Телефон: +7 (123) 456-78-90</p> 
-    </footer> 
-    <!-- Модалка с формой --> 
+        
+        <!-- Добавляем после существующих секций -->
+        <section>
+            <h2 id="video" class="anchor-target">Немного Кузьмы</h2>
+            
+            <!-- Локальное видео с poster и track -->
+            <video class="media" controls preload="metadata" playsinline
+                width="960" height="540" poster="video/poster.jpg">
+                <source src="video/teaser.mp4" type="video/mp4">
+                <track kind="subtitles" srclang="ru" src="video/captions-ru.vtt" label="Russian">
+            </video>
+        </section>
+    </main>
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2023 Mashroom-ah Incorporated. Все права защищены.</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+    </footer>
+    <!-- Модалка с формой -->
     <dialog id="contactDialog" aria-labelledby="dialogTitle">
         <h2 id="dialogTitle">Обратная связь</h2>
-        
+
         <form id="contactForm" method="dialog" novalidate>
             <label for="name">Имя</label>
             <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
 
-            <label for="email">E-mail</label> 
+            <label for="email">E-mail</label>
             <input id="email" name="email" type="email" required autocomplete="email">
 
-            <label for="phone">Телефон</label> 
-            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__" required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="phoneHelp"
+                placeholder="+7 (___) ___-__-__" required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
             <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
 
             <label for="date">Дата</label>
@@ -95,5 +140,6 @@
     </dialog>
 
     <script src="main.js" defer></script>
-</body> 
-</html> 
+</body>
+
+</html>

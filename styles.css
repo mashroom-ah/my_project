@@ -73,25 +73,34 @@ body {
 .site-nav__link {
     color: inherit;
     text-decoration: none;
-    padding: 4px 8px; /* маленький отступ вокруг текста */
+    padding: 10px 20px; /* маленький отступ вокруг текста */
     transition: background-color 0.2s ease; /* плавная подсветка */
+    border-radius: 25px;/*скругленные углы*/
+    font-weight: 500; /*насыщенность текста*/
+    position: relative;
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
 /* Подсветка при наведении/клике */
 .site-nav__link:hover,
 .site-nav__link:active {
-    background: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.15) 0%, rgba(74, 144, 226, 0.25) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+    color: var(--color-primary);
 }
 
 /* Видимый фокус клавиатурой */
 .site-nav__link:focus-visible {
-    outline: 2px solid blue;
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 /* Активный пункт меню */
 .site-nav__link--active,
 .site-nav__link[aria-current="page"] {
-    background: blue;
+    background: var(--color-primary);
     color: white;
 }
 
@@ -215,6 +224,27 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+
+/*Диалоговая кнопка*/
+#openDialog {
+    background: var(--color-primary);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.25);
+    font-size: 1.1rem;
+    position: relative;
+}
+
+#openDialog:hover {
+    background: #1a73e8;
+    box-shadow: 0 6px 20px rgba(10, 132, 255, 0.35);
+}
+
 
 /* Кнопка отправки */
 button[type="submit"] {
